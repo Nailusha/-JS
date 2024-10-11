@@ -1,13 +1,13 @@
 
 //95стр
-var arr = [ "1", "10", "100", "1000" ];
-for (let i=0; i < arr.lenght && arr[i] < 500; i++) {
-    
+var arr = ["1", "10", "100", "1000"];
+for (let i = 0; i < arr.lenght && arr[i] < 500; i++) {
+
 }
 
 //98стр
 class Page {
-    constructor (text) {
+    constructor(text) {
         this.text = text;
     }
     print() {
@@ -108,13 +108,13 @@ forAgainstLet.print();*/
 
 //104стр
 
-function Publication(title,author,pubDate) {
+function Publication(title, author, pubDate) {
     var publicAPI = {
         print() {
             console.log(`
-                Title: ${ title }
-                By: ${ author }
-                ${ pubDate }
+                Title: ${title}
+                By: ${author}
+                ${pubDate}
                 `);
         }
     };
@@ -132,8 +132,8 @@ function Book(bookDetails) {
         print() {
             pub.print();
             console.log(`
-                Publisher: ${ bookDetails.publisher }
-                ISNB: ${ bookDetails.ISNB }
+                Publisher: ${bookDetails.publisher}
+                ISNB: ${bookDetails.ISNB}
                 `);
         }
     };
@@ -141,8 +141,8 @@ function Book(bookDetails) {
     return publicAPI;
 }
 
-function BlogPost(title,author,pubDate,URL) {
-    var pub = Publication(title,author,pubDate);
+function BlogPost(title, author, pubDate, URL) {
+    var pub = Publication(title, author, pubDate);
 
     var publicAPI = {
         print() {
