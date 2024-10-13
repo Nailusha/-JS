@@ -174,5 +174,104 @@ var forAgainstLet = BlogPost(
 
 forAgainstLet.print();
 
-//109стр
+//121стр
+
+//два элемента DOM, btn1, btn2
+
+/*var buttonNames = new Map();
+buttonNames.set(btn1, "Button 1");
+buttonNames.set(btn2, "Button 2");
+
+for (let [btn, btnName] of buttonNames) {
+    btn.addEventListener("click", function onClick() {
+        console.log(`Clicked ${ btnName }`);
+    });
+}
+
+//122стр
+
+var arr = [ 10, 20, 30 ];
+
+for (let [idx, val] of arr.entries()) {
+    console.log(` [${ idx }]: ${ val }`);
+}*/
+
+//124стр
+
+/*function greeting(msg) {
+    return function who(name) {
+        console.log(`${ msg }, ${ name }!`);
+    };
+}
+
+var hello = greeting("Hello");
+var howdy = greeting("Howdy");
+
+hello("Kyle");
+hello("Sarah");
+howdy("Grant");
+
+//126стр
+
+function getSomeData(url) {
+    ajax(url, function onResponse(resp) {
+        console.log(`Response (from ${url}): ${resp}`
+        );
+    });
+}
+
+getSomeData("https://some.url/wherever");*/
+
+
+//130стр
+
+function classroom(teacher) {
+    return function study() {
+        console.log(
+            `${teacher} says to study ${this.topic}`
+        );
+    };
+}
+
+var assignment = classroom("Kyle");
+
+var homework = {
+    topic: "JS",
+    assignment: assignment
+};
+
+homework.assignment();
+
+var otherHomework = {
+    topic: "Math"
+};
+
+assignment.call(otherHomework);
+
+//134стр
+
+var homework = {
+    topic: "JS"
+};
+
+var otherHomework = Object.create(homework);
+
+otherHomework.topic;
+
+
+//138стр
+
+var homework = {
+    study() {
+        console.log(`Please study ${ this.topic }`);
+    }
+};
+
+var jsHomework = Object.create(homework);
+jsHomework.topic = "JS";
+jsHomework.study();
+
+var mathHomework = Object.create(homework);
+mathHomework.topic = "Math";
+mathHomework.study();
 
